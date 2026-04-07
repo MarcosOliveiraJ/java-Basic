@@ -1,39 +1,22 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 void main() {
+    ContaCorrente contaCorrente = new ContaCorrente("780", "234", "sdtft", 237);
+    ContaPoupanca contaPoupanca = new ContaPoupanca("209", "290", "jonas", 789);
+    ContaPJ cpj = new ContaPJ("759", "720", "Igor", 890);
 
-    int a, b, c, d;
-    int resultado;
+    System.out.println("Conta Corrente");
+    contaCorrente.depositar(200);
+    contaCorrente.sacar(2000);
+    contaCorrente.calcularTarifaMensal();
 
-    a = 2;
-    b = 6;
-    c = 3;
-    resultado = a * b / c;
-    System.out.println("Resultado 1: " + resultado);
+    System.out.println("-------------------------------------");
+    System.out.println("Conta Poupança");
+    contaPoupanca.depositar(200);
+    contaPoupanca.sacar(150);
+    contaPoupanca.calcularTarifaMensal();
 
-    a = 3;
-    b = 2;
-    c = 4;
-    resultado = a + b * c;
-    System.out.println("Resultado 2: " + resultado);
-
-    a = 3;
-    b = 2;
-    c = 4;
-    resultado = (a + b) * c;
-    System.out.println("Resultado 3: " + resultado);
-
-    a = 60;
-    b = 3;
-    c = 2;
-    d = 4;
-    resultado = a / (b + c) * d;
-    System.out.println("Resultado 4: " + resultado);
-
-    a = 60;
-    b = 3;
-    c = 2;
-    d = 4;
-    resultado = a / ((b + c) * d);
-    System.out.println("Resultado 5: " + resultado);
+    System.out.println("-------------------------------------");
+    System.out.println("Conta Pessoa Jurídica");
+    cpj.depositar(100);
+    cpj.sacar(20);
+    cpj.calcularTarifaMensal();
 }
