@@ -20,6 +20,14 @@ public class Pedido {
         }
     }
 
+    public void cancelarPedido() {
+        if (this.status != StatusPedido.ENTREGUE) {
+            this.status = StatusPedido.CANCELADO;
+        } else {
+            System.out.println("Erro: Pedidos entregues não podem ser cancelados.");
+        }
+    }
+
     public int getId() {
         return id;
     }
